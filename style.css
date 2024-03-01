@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(todo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: ghostwhite;
+}
+
+.btn.btn-secondary {
+    background-color: azure;
+}
+
+.btn.btn-secondary:hover {
+    background-color: rgb(77, 181, 246);
+}
+
+.input.input-secondary {
+    border-color: whitesmoke;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 400px;
+    min-width: 640px;
+    max-width: 1000px;
+    background: rgb(65, 61, 61);
+    box-shadow: 0 8px 32px 0 rgb(39, 37, 41);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 10px;
+    border: 1px solid rgba(16, 1, 1, 0.18);
+    padding: 20px;
+    opacity: 0.7;
+}
+
+.container header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.alert-message {
+    width: 100%;
+    transition: all 0.3s ease;
+    transform: scale(0.9);
+}
+
+.alert-message.show {
+    display: block;
+    transform: scale(1);
+}
+
+.alert-message.hide {
+    display: none;
+}
+
+header .input-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.input-section input {
+    margin-right: 10px;
+    max-width: 100%;
+}
+
+.todos-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.todos-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100%;
+    max-height: 54vh;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.todos-list .todo-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid rgb(27, 2, 2);
+}
+
+.todo-item p {
+    margin-right: 10px;
+}
+
+.todo-item .todo-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+}
+
+.todo-actions button:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 530px) {
+    .container {
+        margin: 0 20px;
+        max-width: 96%;
+        min-width: 96%;
+    }
+}
